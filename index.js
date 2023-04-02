@@ -23,3 +23,11 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+function isPalindrome(s) {
+  // Convert the string to lowercase and remove non-alphanumeric characters
+  s = s.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  
+  // Check if the string is the same forwards and backwards
+  return s === s.split("").reverse().join("");
+}
